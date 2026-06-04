@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 // import 'package:flutter/material.dart';
 
 class Cuentas extends StatelessWidget {
-  const Cuentas({Key? key}) : super(key: key);
+  const Cuentas({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class Cuentas extends StatelessWidget {
             ),
             child: Stack(
               children: [
-                Container(
+                SizedBox(
                   height: heightS * 0.9,
                   width: double.infinity,
                   child: SingleChildScrollView(
@@ -94,13 +94,13 @@ class Cuentas extends StatelessWidget {
 class Button extends StatelessWidget {
   final String title;
 
-  const Button({Key? key, required this.title}) : super(key: key);
+  const Button({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 12.0),
-      child: Container(
+      child: SizedBox(
         width: 204,
         //height: 35,
         child: CupertinoButton(
@@ -129,13 +129,13 @@ class Button extends StatelessWidget {
 
 class RedButton extends StatelessWidget {
   final String title;
-  const RedButton({Key? key, required this.title}) : super(key: key);
+  const RedButton({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 12.0),
-      child: Container(
+      child: SizedBox(
         width: 204,
         //height: 51,
         child: CupertinoButton(

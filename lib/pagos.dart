@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Pagos extends StatefulWidget {
-  const Pagos({Key? key}) : super(key: key);
+  const Pagos({super.key});
 
   @override
   State<Pagos> createState() => _PagosState();
@@ -144,8 +144,8 @@ class _PagosState extends State<Pagos> {
         ),
         Container(
           child: Offstage(
-            child: const TablaT(),
             offstage: _visibility,
+            child: const TablaT(),
           ),
         ),
       ],
@@ -154,7 +154,7 @@ class _PagosState extends State<Pagos> {
 }
 
 class TablaT extends StatefulWidget {
-  const TablaT({Key? key}) : super(key: key);
+  const TablaT({super.key});
 
   @override
   State<TablaT> createState() => _TablaTState();
@@ -259,7 +259,7 @@ class _TablaTState extends State<TablaT> {
                           vertical: 12.0, horizontal: 6.0),
                       child: Text('TOTAL', style: textStyleH4Grey),
                     ),
-                    Container(
+                    SizedBox(
                       width: 188.0,
                       child: CupertinoTextField(
                         padding: EdgeInsets.all(8.0),
@@ -321,7 +321,7 @@ class _TablaTState extends State<TablaT> {
                       ),
                     ]),
                     TableRow(children: [
-                      Container(
+                      SizedBox(
                         width: 28.0,
                         child: Checkbox(
                           checkColor: primaryColor,
@@ -420,7 +420,7 @@ class _TablaTState extends State<TablaT> {
                       ),
                     ]),
                     TableRow(children: [
-                      Container(
+                      SizedBox(
                         width: 28.0,
                         child: Checkbox(
                           checkColor: primaryColor,
@@ -535,7 +535,7 @@ class _TablaTState extends State<TablaT> {
                           vertical: 12.0, horizontal: 6.0),
                       child: Text('TOTAL', style: textStyleH4Grey),
                     ),
-                    Container(
+                    SizedBox(
                       width: 188.0,
                       child: CupertinoTextField(
                         padding: EdgeInsets.all(8.0),
