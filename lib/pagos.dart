@@ -36,7 +36,7 @@ class _PagosState extends State<Pagos> {
                 bottomRight: Radius.circular(8)),
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.3),
+                color: Colors.grey.withValues(alpha: 0.3),
                 spreadRadius: 2,
                 blurRadius: 7,
                 offset: Offset(0, 2), // changes position of shadow
@@ -142,11 +142,9 @@ class _PagosState extends State<Pagos> {
             ],
           ),
         ),
-        Container(
-          child: Offstage(
-            offstage: _visibility,
-            child: const TablaT(),
-          ),
+        Offstage(
+          offstage: _visibility,
+          child: const TablaT(),
         ),
       ],
     );
@@ -233,7 +231,7 @@ class _TablaTState extends State<TablaT> {
                       ),
                       CupertinoTextField(
                         padding: EdgeInsets.all(2.0),
-                        onChanged: (value) => print(value),
+                        onChanged: (value) => debugPrint(value),
                         keyboardType: TextInputType.number,
                         cursorColor: primaryColor,
                         decoration: BoxDecoration(
@@ -263,7 +261,7 @@ class _TablaTState extends State<TablaT> {
                       width: 188.0,
                       child: CupertinoTextField(
                         padding: EdgeInsets.all(8.0),
-                        onChanged: (value) => print(value),
+                        onChanged: (value) => debugPrint(value),
                         keyboardType: TextInputType.number,
                         cursorColor: primaryColor,
                         decoration: BoxDecoration(
@@ -375,7 +373,7 @@ class _TablaTState extends State<TablaT> {
                             padding: const EdgeInsets.only(left: 8.0),
                             child: CupertinoTextField(
                               padding: EdgeInsets.all(8.0),
-                              onChanged: (value) => print(value),
+                              onChanged: (value) => debugPrint(value),
                               keyboardType: TextInputType.number,
                               cursorColor: primaryColor,
                               decoration: BoxDecoration(
@@ -393,7 +391,7 @@ class _TablaTState extends State<TablaT> {
                             padding: const EdgeInsets.only(left: 12.0),
                             child: CupertinoTextField(
                               padding: EdgeInsets.all(8.0),
-                              onChanged: (value) => print(value),
+                              onChanged: (value) => debugPrint(value),
                               keyboardType: TextInputType.number,
                               cursorColor: primaryColor,
                               decoration: BoxDecoration(
@@ -407,7 +405,7 @@ class _TablaTState extends State<TablaT> {
                                 const EdgeInsets.only(left: 12.0, top: 6.0),
                             child: CupertinoTextField(
                               padding: EdgeInsets.all(8.0),
-                              onChanged: (value) => print(value),
+                              onChanged: (value) => debugPrint(value),
                               keyboardType: TextInputType.number,
                               cursorColor: primaryColor,
                               decoration: BoxDecoration(
@@ -474,7 +472,7 @@ class _TablaTState extends State<TablaT> {
                             padding: const EdgeInsets.only(left: 8.0),
                             child: CupertinoTextField(
                               padding: EdgeInsets.all(8.0),
-                              onChanged: (value) => print(value),
+                              onChanged: (value) => debugPrint(value),
                               keyboardType: TextInputType.number,
                               cursorColor: primaryColor,
                               decoration: BoxDecoration(
@@ -493,7 +491,7 @@ class _TablaTState extends State<TablaT> {
                                 left: 12.0, top: 4.0, bottom: 4.0),
                             child: CupertinoTextField(
                               padding: EdgeInsets.all(8.0),
-                              onChanged: (value) => print(value),
+                              onChanged: (value) => debugPrint(value),
                               keyboardType: TextInputType.number,
                               cursorColor: primaryColor,
                               decoration: BoxDecoration(
@@ -507,7 +505,7 @@ class _TablaTState extends State<TablaT> {
                                 const EdgeInsets.only(left: 12.0, top: 0.0),
                             child: CupertinoTextField(
                               padding: EdgeInsets.all(8.0),
-                              onChanged: (value) => print(value),
+                              onChanged: (value) => debugPrint(value),
                               keyboardType: TextInputType.number,
                               cursorColor: primaryColor,
                               decoration: BoxDecoration(
@@ -539,7 +537,7 @@ class _TablaTState extends State<TablaT> {
                       width: 188.0,
                       child: CupertinoTextField(
                         padding: EdgeInsets.all(8.0),
-                        onChanged: (value) => print(value),
+                        onChanged: (value) => debugPrint(value),
                         keyboardType: TextInputType.number,
                         cursorColor: primaryColor,
                         decoration: BoxDecoration(

@@ -20,7 +20,7 @@ class Cuentas extends StatelessWidget {
             style: textStyleH1Black,
           ),
         ),
-        backgroundColor: Colors.black.withOpacity(0.2),
+        backgroundColor: Colors.black.withValues(alpha: 0.2),
         child: SafeArea(
           child: Container(
             width: widthS * 0.97,
@@ -36,7 +36,7 @@ class Cuentas extends StatelessWidget {
                   bottomRight: Radius.circular(8)),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.5),
+                  color: Colors.grey.withValues(alpha: 0.5),
                   spreadRadius: 2,
                   blurRadius: 7,
                   offset: Offset(0, 3), // changes position of shadow
