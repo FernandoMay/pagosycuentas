@@ -1,29 +1,53 @@
 # Pagos y Cuentas
 
-A personal expense management application built with Flutter. Manage your payments and accounts with an intuitive interface.
+Aplicación de gestión de cuentas por pagar y administración de gastos empresariales. Prototipo UI para flujo de pagos a proveedores en contexto mexicano.
 
-## Features
+## Stack
 
-- View and manage accounts payable
-- Track payment sources and amounts
-- Organize expenses by vendor and concept
+| Capa | Tecnología |
+|------|-----------|
+| Framework | Flutter 3.x / Dart 3.x |
+| Diseño | Material 3 + Cupertino (híbrido) |
+| CI/CD | GitHub Actions (analyze + test + build APK) |
+| PWA | Service worker + manifest |
 
-## Getting Started
+## Funcionalidades
 
-This project uses Flutter 3.0+ and Material 3 design.
+- Lista de cuentas por pagar con datos de proveedor (hardcoded)
+- Tabla expandible por proveedor: concepto, monto, pago parcial
+- Cuentas de origen (BANORTE, BBVA) con saldos disponibles
+- Selección de pago con cheque
+- Botones Cancelar / Pagar con estilos personalizados
+- Barra de navegación Cupertino con paleta azul/gris personalizada
+- Constantes de color y estilos de texto centralizados
 
-```sh
+## Estructura
+
+```
+lib/
+├── main.dart           # Entry point + tema Material 3
+├── cuentas.dart        # Pantalla principal + botones
+├── pagos.dart          # Widgets Pagos + TablaT (detalle)
+└── constants.dart      # Colores y TextStyles
+```
+
+## Inicio rápido
+
+```bash
 flutter pub get
 flutter run
 ```
 
-## Testing
+## Pruebas
 
-```sh
+```bash
 flutter test
 flutter analyze
 ```
 
-![App](pagos1.png)
-![Roller](pagos2.png)
-![Rollo](pagos3.png)
+## Notas
+
+- Prototipo UI estático — sin backend, sin estado, sin navegación real
+- Datos hardcoded de ejemplo mexicano (AUTOTRANSPORTES MISIONEROS, etc.)
+- Sin dependencias de terceros (solo Flutter SDK + cupertino_icons)
+- Compatible con PWA
